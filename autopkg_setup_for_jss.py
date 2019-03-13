@@ -22,5 +22,6 @@ import autopkg_jssimporter_setup
 
 
 autopkg_prefs_file = sys.argv[1]
+repo_list = sys.argv[2]
 
-autopkg_jssimporter_setup.main(autopkg_prefs_file)
+autopkg_jssimporter_setup.main(autopkg_prefs_file, repo_list)
