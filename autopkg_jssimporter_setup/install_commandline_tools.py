@@ -42,9 +42,11 @@ def install_commandline_tools():
         else:
             # install the update
             print "Installing: {}".format(cli_version)
-            install_output = subprocess.Popen(["/usr/sbin/softwareupdate", "-i", cli_version, "--verbose"],
+            install_output = subprocess.Popen(["/usr/bin/sudo", "/usr/sbin/softwareupdate", "-i", cli_version, "--verbose"],
                                               stdout=subprocess.PIPE).communicate()[0]
             print install_output
+    else:
+        print "No Command Line Tools available via softwareupdate at this time."
 
     # remove the touched file
     try:
