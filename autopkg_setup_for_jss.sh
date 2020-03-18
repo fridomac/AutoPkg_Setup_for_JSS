@@ -220,7 +220,7 @@ configureJSSImporterWithLocalRepo() {
 # Commands
 GIT="/usr/bin/git"
 DEFAULTS="/usr/bin/defaults"
-AUTOPKG="/usr/local/bin/autopkg"
+AUTOPKG="/Library/AutoPkg/autopkg"
 PLISTBUDDY="/usr/libexec/PlistBuddy"
 
 # logger
@@ -237,7 +237,7 @@ if [[ ! -f "/usr/bin/git" ]]; then
 fi
 
 # Get AutoPkg if not already installed
-if [[ ! -d ${AUTOPKG} ]]; then
+if [[ ! -f ${AUTOPKG} ]]; then
     installAutoPkg "${USERHOME}"
 fi
 
