@@ -3,3 +3,7 @@ credentials-*.yaml
 *.pyc
 config/*
 config
+.DS_Store
+.gitignore
+.gitignore
+.gitignore
